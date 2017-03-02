@@ -1,0 +1,23 @@
+{
+  "name": "miaoxing/sso",
+  "description": "Miaoxing SSO Plugin",
+  "keywords": [
+    "miaoxing", "sso"
+  ],
+  "license": "MIT",
+  "require": {
+    "miaoxing/app": "dev-master@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "Miaoxing\\Sso\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MiaoxingTest\\Sso\\": "tests"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
