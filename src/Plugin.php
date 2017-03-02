@@ -42,7 +42,6 @@ class Plugin extends \miaoxing\plugin\BasePlugin
         $app = $this->app;
         $page = $app->getControllerAction();
         if (in_array($page, $this->ssoPages)) {
-
             // 附加原来的参数和跳转地址
             $queries = $app->request->getQueries();
             if (!isset($queries['next']) && $referer = $app->request->getReferer()) {
@@ -81,6 +80,7 @@ class Plugin extends \miaoxing\plugin\BasePlugin
             $broker->removeToken();
             $ret = $broker->attach(true);
             $this->logger->info('Reattach...', $ret);
+
             return $this->response->redirect($ret['next']);
         }
 

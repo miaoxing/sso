@@ -28,12 +28,14 @@ class Sso extends \Wei\BaseController
     public function serverAction($req)
     {
         $ret = wei()->sso->work($req['command']);
+
         return $this->ret($ret);
     }
 
     public function brokerAction($req)
     {
         $ret = wei()->ssoBroker->work($req['command']);
+
         return $this->ret($ret);
     }
 
@@ -42,6 +44,7 @@ class Sso extends \Wei\BaseController
         if ($this->request['next']) {
             return $this->response->redirect($this->request['next'], 302);
         }
+
         return wei()->ret($ret);
     }
 }

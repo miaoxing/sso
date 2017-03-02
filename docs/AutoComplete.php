@@ -1,6 +1,7 @@
 <?php
 
 namespace plugins\sso\docs {
+
     /**
      * @property    \Miaoxing\Sso\Service\Sso $sso 单点登陆服务（Single Sign On）
      *
@@ -12,6 +13,7 @@ namespace plugins\sso\docs {
 }
 
 namespace {
+
     /**
      * @return \plugins\sso\docs\AutoComplete
      */
