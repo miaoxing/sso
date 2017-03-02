@@ -1,4 +1,4 @@
-# 演示
+# 单点登录
 
 [![Build Status](https://img.shields.io/travis/miaoxing/sso/master.svg?style=flat-square)](https://travis-ci.org/miaoxing/sso)
 [![Coverage Status](https://img.shields.io/coveralls/miaoxing/sso.svg?style=flat-square)](https://coveralls.io/r/miaoxing/sso?branch=master)
