@@ -52,7 +52,7 @@ class Sso extends \miaoxing\plugin\BaseService
         $this->session->start();
         $this->logger->debug('Sso session started', [
             'path' => session_save_path(),
-            'data' => $this->session->toArray()
+            'data' => $this->session->toArray(),
         ]);
 
         $ret = $this->validateBrokerSessionId($sid);
@@ -102,7 +102,7 @@ class Sso extends \miaoxing\plugin\BaseService
             $this->session->start();
             $this->logger->debug('User session started', [
                 'path' => session_save_path(),
-                'data' => $this->session->toArray()
+                'data' => $this->session->toArray(),
             ]);
         }
 
