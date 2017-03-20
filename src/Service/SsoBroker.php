@@ -29,7 +29,7 @@ class SsoBroker extends \miaoxing\plugin\BaseService
      *
      * @var string
      */
-    public $broker;
+    protected $broker;
 
     /**
      * My secret word, given by SSO provider.

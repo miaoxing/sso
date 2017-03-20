@@ -38,7 +38,7 @@ class Sso extends \miaoxing\plugin\BaseService
         if (!$linkedId) {
             return $this->ret('The broker session id isn\'t attached to a user session', -2);
         }
-        $this->tmpLogger->debug('Got session id: ' . $linkedId);
+        $this->logger->debug('Got session id: ' . $linkedId);
 
         if (session_status() === PHP_SESSION_ACTIVE) {
             if ($linkedId !== session_id()) {
@@ -50,7 +50,10 @@ class Sso extends \miaoxing\plugin\BaseService
 
         session_id($linkedId);
         $this->session->start();
-        $this->tmpLogger->debug('Session started, path: ' . session_save_path(), $_SESSION);
+        $this->logger->debug('Sso session started', [
+            'path' => session_save_path(),
+            'data' => $this->session->toArray()
+        ]);
 
         $ret = $this->validateBrokerSessionId($sid);
         if ($ret['code'] !== 1) {
@@ -97,7 +100,10 @@ class Sso extends \miaoxing\plugin\BaseService
     {
         if (session_status() !== PHP_SESSION_ACTIVE) {
             $this->session->start();
-            $this->tmpLogger->debug('User session started, path: ' . session_save_path(), $_SESSION);
+            $this->logger->debug('User session started', [
+                'path' => session_save_path(),
+                'data' => $this->session->toArray()
+            ]);
         }
 
         $requestIp = $this->request->getIp();
@@ -329,7 +335,7 @@ class Sso extends \miaoxing\plugin\BaseService
      */
     protected function ret($message, $code = 1, array $data = [])
     {
-        $this->tmpLogger->debug($message, ['code' => $code] + $data);
+        $this->logger->debug($message, ['code' => $code] + $data);
 
         return ['code' => $code, 'message' => $message] + $data;
     }

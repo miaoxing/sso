@@ -153,7 +153,10 @@ class SsoUserMobile extends \miaoxing\plugin\BaseController
         }
 
         // 2. 检查远程是否存在该手机号码
-        $appUser = wei()->appUser()->select('id')->withStatus(User::STATUS_MOBILE_VERIFIED)->find(['mobile' => $mobile]);
+        $appUser = wei()->appUser()
+            ->select('id')
+            ->withStatus(User::STATUS_MOBILE_VERIFIED)
+            ->find(['mobile' => $mobile]);
 
         return [
             'code' => 1,
