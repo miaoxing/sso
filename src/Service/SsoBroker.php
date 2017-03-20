@@ -191,7 +191,7 @@ class SsoBroker extends \miaoxing\plugin\BaseService
         $close = false;
         if (session_status() == PHP_SESSION_ACTIVE) {
             $close = true;
-            $this->tmpLogger->debug('Session write close');
+            $this->logger->debug('Session write close');
             session_write_close();
         }
 
@@ -205,11 +205,11 @@ class SsoBroker extends \miaoxing\plugin\BaseService
             'ip' => $this->ip,
             'throwException' => false,
         ]);
-        $this->tmpLogger->debug($url, $http->getResponseText());
+        $this->logger->debug($url, $http->getResponseText());
 
         // 3. 重启session
         if ($close) {
-            $this->tmpLogger->debug('Session restart');
+            $this->logger->debug('Session restart');
             wei()->session->start();
         }
 
@@ -231,7 +231,7 @@ class SsoBroker extends \miaoxing\plugin\BaseService
             $this->logger->warning($ret['message'], $ret + ['url' => $url]);
         }
 
-        $this->tmpLogger->debug($ret['message'], $ret);
+        $this->logger->debug($ret['message'], $ret);
 
         return $ret;
     }

@@ -73,7 +73,7 @@ class Plugin extends \miaoxing\plugin\BasePlugin
         }
 
         $ret = $broker->getUserInfo();
-        $this->tmpLogger->debug($ret);
+        $this->logger->debug($ret);
 
         // 服务器返回未关联,需要重新关联
         if (isset($ret['attached']) && $ret['attached'] == false) {
