@@ -23,8 +23,8 @@
         <div class="input-group">
           <input type="tel" class="form-control" id="verify-code" name="verifyCode" placeholder="请输入验证码">
                   <span class="input-group-btn border-left">
-                      <button type="button" class="js-verify-code-send text-primary btn btn-default form-link"
-                              id="getVerifyCode">获取验证码
+                      <button type="button" class="js-verify-code-send text-primary btn btn-default form-link">
+                        获取验证码
                       </button>
                   </span>
         </div>
