@@ -3,7 +3,7 @@
 namespace Miaoxing\Sso\Service;
 
 /**
- * @property \services\Logger $logger
+ * @property \Miaoxing\App\Service\Logger $logger
  * @property \Wei\Request $request
  * @property \Wei\Response $response
  * @property \Wei\Cookie $cookie

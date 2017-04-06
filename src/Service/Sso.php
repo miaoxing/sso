@@ -9,7 +9,7 @@ namespace Miaoxing\Sso\Service;
  * @property \Wei\Request $request
  * @property \Wei\Response $response
  * @property \Wei\Session $session
- * @property \services\Logger $logger
+ * @property \Miaoxing\App\Service\Logger $logger
  * @link https://github.com/jasny/sso
  */
 class Sso extends \miaoxing\plugin\BaseService
