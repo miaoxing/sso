@@ -12,7 +12,7 @@ namespace Miaoxing\Sso\Service;
  * @property \Miaoxing\App\Service\Logger $logger
  * @link https://github.com/jasny/sso
  */
-class Sso extends \miaoxing\plugin\BaseService
+class Sso extends \Miaoxing\Plugin\BaseService
 {
     /**
      * 客户端的信息

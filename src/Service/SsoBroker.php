@@ -8,7 +8,7 @@ namespace Miaoxing\Sso\Service;
  * @property \Wei\Response $response
  * @property \Wei\Cookie $cookie
  */
-class SsoBroker extends \miaoxing\plugin\BaseService
+class SsoBroker extends \Miaoxing\Plugin\BaseService
 {
     /**
      * Url of SSO server
