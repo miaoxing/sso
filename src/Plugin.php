@@ -8,7 +8,7 @@ namespace Miaoxing\Sso;
  * @property \Wei\Response $response
  * @property \Wei\Url $url
  */
-class Plugin extends \miaoxing\plugin\BasePlugin
+class Plugin extends \Miaoxing\Plugin\BasePlugin
 {
     protected $name = '单点登陆（Single Sign On）';
 
