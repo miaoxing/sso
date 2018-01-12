@@ -93,7 +93,7 @@ class Plugin extends \Miaoxing\Plugin\BasePlugin
         }
     }
 
-    public function onBeforeUserMenuRender()
+    public function onBeforeUserIndexRenderMenu()
     {
         if (wei()->curUser['mobile'] || wei()->curUser['appUserId']) {
             return;
