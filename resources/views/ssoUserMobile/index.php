@@ -59,7 +59,7 @@
   <a class="js-group-unregistrable hide" href="<?= $url->query('password/reset') ?>">忘记密码?</a>
 </form>
 
-<?= $block('js') ?>
+<?= $block->js() ?>
 <script>
   require(['jquery-form', 'plugins/verify-code/js/verify-code'], function () {
     $('.js-check-mobile').click(function () {
