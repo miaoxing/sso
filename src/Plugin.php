@@ -99,6 +99,6 @@ class Plugin extends \Miaoxing\Plugin\BasePlugin
             return;
         }
 
-        $this->view->display('sso:ssoUserMobile/menu.php');
+        $this->view->display('@sso/ssoUserMobile/menu.php');
     }
 }
