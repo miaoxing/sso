@@ -21,7 +21,8 @@
 
       <div class="col-control">
         <div class="input-group">
-          <input type="tel" class="form-control" id="verify-code" name="verifyCode" placeholder="请输入验证码">
+          <input type="tel" class="form-control" id="verify-code" name="verifyCode" placeholder="请输入验证码"
+            maxlength="6">
                   <span class="input-group-btn border-left">
                       <button type="button" class="js-verify-code-send text-primary btn btn-default form-link">
                         获取验证码
