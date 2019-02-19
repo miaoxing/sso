@@ -1,6 +1,6 @@
 <?php $view->layout() ?>
 
-<form class="js-mobile-form form form-inset m-t" method="post" action="<?= $url->query('sso-user-mobile/create') ?>">
+<form class="js-mobile-form form form-inset mt-3" method="post" action="<?= $url->query('sso-user-mobile/create') ?>">
   <div class="form-body">
     <div class="form-group">
       <label for="mobile" class="control-label">
