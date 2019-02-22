@@ -62,7 +62,7 @@
 
 <?= $block->js() ?>
 <script>
-  require(['jquery-form', 'plugins/verify-code/js/verify-code'], function () {
+  require(['plugins/app/libs/jquery-form/jquery.form', 'plugins/verify-code/js/verify-code'], function () {
     $('.js-check-mobile').click(function () {
       $.ajax({
         dataType: 'json',
