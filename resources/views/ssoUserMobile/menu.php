@@ -1,7 +1,7 @@
 <ul class="list list-indented">
   <li class="list-item-link">
     <a class="list-item has-feedback" href="<?= $url('sso-user-mobile') ?>">
-      <div class="list-col list-col-left list-col-icon">
+      <div class="list-col list-col-icon">
         <i class="list-icon ni ni-gift"></i>
       </div>
       <div class="list-col list-middle">
