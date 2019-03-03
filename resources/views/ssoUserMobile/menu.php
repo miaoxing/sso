@@ -5,7 +5,7 @@
         <i class="list-icon ni ni-gift"></i>
       </div>
       <div class="list-col list-middle">
-        <h4 class="list-title">
+        <h4 class="list-item-title">
           绑定手机
         </h4>
       </div>
