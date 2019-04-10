@@ -63,7 +63,7 @@ class SsoUserMobile extends \Miaoxing\Plugin\BaseController
             // 创建新用户
             $appUser = wei()->appUser();
             $appUser->setPlainPassword($req['password']);
-            $appUser->setStatus(User::STATUS_MOBILE_VERIFIED, true);
+            $appUser->setMobileVerified();
             $appUser->save([
                 'mobile' => $req['mobile'],
                 'score' => $this->curUser['score'],
@@ -71,7 +71,7 @@ class SsoUserMobile extends \Miaoxing\Plugin\BaseController
         } else {
             // 如果不可注册,只要输入密码
             /** @var \Miaoxing\Plugin\Service\User $appUser */
-            $appUser = wei()->appUser()->withStatus(User::STATUS_MOBILE_VERIFIED)->find(['mobile' => $req['mobile']]);
+            $appUser = wei()->appUser()->mobileVerified()->find(['mobile' => $req['mobile']]);
             if (!$appUser->verifyPassword($req['password'])) {
                 return $this->err('您输入的密码不正确,请重新输入');
             }
@@ -81,7 +81,7 @@ class SsoUserMobile extends \Miaoxing\Plugin\BaseController
 
         // 记录手机信息
         $this->curUser->setPlainPassword($req['password']);
-        $this->curUser->setStatus(User::STATUS_MOBILE_VERIFIED, true);
+        $this->curUser->setMobileVerified();
         $this->curUser->save([
             'appUserId' => $appUser['id'],
             'mobile' => $req['mobile'],
@@ -155,7 +155,7 @@ class SsoUserMobile extends \Miaoxing\Plugin\BaseController
         // 2. 检查远程是否存在该手机号码
         $appUser = wei()->appUser()
             ->select('id')
-            ->withStatus(User::STATUS_MOBILE_VERIFIED)
+            ->mobileVerified()
             ->find(['mobile' => $mobile]);
 
         return [
